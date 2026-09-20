@@ -1,0 +1,38 @@
+name: woyofal_app
+description: "Application Woyofal Senelec - Gestion et paiement d'électricité"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  firebase_core: ^4.7.0
+  cloud_firestore: ^6.3.0
+  shared_preferences: ^2.5.3
+  http: ^1.2.0
+  url_launcher: ^6.3.1        # ✅ une seule fois, bien indenté ici
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icon/
+
+flutter_launcher_icons:       # ✅ à la racine, PAS dans flutter:
+  image_path: "assets/icon/icon.png"
+  android: true
+  ios: true
+  min_sdk_android: 21
+  ios_content_mode: appIconDefault
